@@ -62,3 +62,29 @@ h5{
     line-height: 1.5;
     margin: 0 auto 3rem;
 }
+
+img {
+    width: 100%;
+    object-fit: cover;  
+}
+
+.container {
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+    margin: 5rem 0;
+}
+
+.btn {
+    background: var(--color-black);
+    color: var(--color-white);
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
