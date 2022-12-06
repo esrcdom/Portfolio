@@ -224,3 +224,71 @@ header {
     bottom: -1rem;
     z-index: 1;
 }
+
+/* ---------------Servicios --------------- */
+
+section#servicios {
+    margin-top: 8rem;
+}
+
+.servicios__container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 2rem;
+}
+
+.servicios__left {
+    background: var(--color-primary);
+    padding: 2rem;
+    color: var(--color-light);
+}
+
+.servicios__left h1 {
+    font-size: 7rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.servicios__left h4 {
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.servicios__right h2 {
+    margin-bottom: 2rem;
+}
+
+.servicios__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicios__card {
+    background: var(--color-light);
+    padding: 4rem 2rem;
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.servicios__card:hover {
+    background: var(--color-primary);
+}
+
+.servicios__card:hover * {
+    color: var(--color-white);
+    transition: all 400ms ease;
+}
+
+.servicios__card-icon {
+    font-size: 2rem;
+}
+
+.servicios__card h5 {
+    margin: 1rem 0;
+}
+
+.servicios__card:hover a {
+    margin-left: 1rem;
+}
