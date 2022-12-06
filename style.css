@@ -87,4 +87,66 @@ section {
     padding: 0.8rem 1.6rem;
     border: 1px solid transparent;
     cursor: pointer;
+    transition: all 800ms ease;
+}
+
+.btn:hover {
+    background: var(--color-light);
+    color: var(--color-black);
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    border-color: var(--color-primary);
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.btn-lg {
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+
+}
+
+/* ------------------NAVBAR-----------------*/
+
+nav {
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 2;    
+}
+
+nav a {
+    color: var(--color-black);
+    font-size: 0.9rem;
+    transition: all 400ms ease;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botones abrir y cerrar para tablets y smartphones */
+nav button {
+    display: none;
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
 }
