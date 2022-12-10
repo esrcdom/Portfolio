@@ -225,6 +225,25 @@ header {
     z-index: 1;
 }
 
+/* ------------------Whatssap Contact-----------------*/
+
+.whatssap {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .whatssap {
+        display: block;
+        position: fixed;    
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        
+        
+    }
+}
+
+
 /* ---------------Servicios --------------- */
 
 section#servicios {
@@ -354,7 +373,7 @@ section#servicios {
 
 .portfolio__project-image img {
     transform: 0;
-    transition: all 5s ease;
+    transition: all 15s ease;
 }
 
 .portfolio__cta {
@@ -363,5 +382,62 @@ section#servicios {
 }
 
 .portfolio__project-image:hover img {
-    transform: translateY(-100%);
+    transform: translateY(calc(-100% + 18rem));
+}
+
+/* ------------------Contacto-----------------*/
+
+#contact {
+    background: var(--color-primary);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    font-size: 0.9rem;
+}
+
+.contact__container h2 {
+    color: var(--color-white);
+}
+
+.contact__container p {
+    margin: 1rem 0 2rem;
+}
+
+.contact__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact__social a {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    transition: all 400ms ease;
+}
+
+.contact__social a:hover {
+    color: var(--color-black);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form input, textarea {
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    background: var(--color-primary);
+    padding: 1.2rem 0;
+    color: var(--color-white);
+    border-top: 1px solid var(--color-black);
 }
