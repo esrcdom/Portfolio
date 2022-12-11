@@ -487,11 +487,39 @@ footer {
         gap: 0;
         z-index: 3;
         display: none;
+        perspective: 400px;
     }
 
     .nav__menu li {
         width: 100%;
         height: 5.4rem;
+        animation: flipNavItem 200ms 0s ease forwards;
+        transform-origin: top;
+    }
+
+    .nav__menu li:nth-child(2) {
+        animation-delay: 100ms;
+    }
+    .nav__menu li:nth-child(3) {
+        animation-delay: 200ms;
+    }
+    .nav__menu li:nth-child(4) {
+        animation-delay: 300ms;
+    }
+    .nav__menu li:nth-child(5) {
+        animation-delay: 400ms;
+    }
+
+    @keyframes flipNavItem { 
+        from {
+            transform: rotateX(90deg);
+            opacity: 0;
+        }
+
+        to {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
     }
 
     .nav__menu li a {
@@ -522,4 +550,83 @@ footer {
     nav button#close-menu-btn {
         display: none;
     }
+
+    /* --------------- Header --------------- */
+
+    header {
+        height: 100%;
+        padding: 14rem 0 0;
+    }
+
+    .header__container {
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .header__left {
+        margin-bottom: 6rem;
+    }
+
+    .header__right {
+        align-self: flex-end;
+        height: 100%;
+    }
+
+    .header__right-bg {
+        width: 30rem;
+        height: 30rem;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .header__image {
+        bottom: -1rem;
+        width: 100%;
+    }
+
+    .header__social {
+        bottom: 4rem;
+    }
+
+    .header__social a {
+        color: var(--color-primary);
+        z-index: 3;
+    }
+
+     /* --------------- SERVICIOS  --------------- */
+
+    .servicios__container {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios__left {
+        display: none;
+    }
+
+    .servicios__cards {
+        gap: 1rem;
+    }
+
+    /* --------------- PORTFOLIO  --------------- */
+
+    .portfolio__head h3 {
+        width: 40%;
+    }
+
+    .portfolio__head-right {
+        width: auto;
+    }
+
+    /* --------------- CONTACTO  --------------- */
+
+    .contact__container {
+        gap: 2rem;
+    }
+
+    .contact__social a {
+        font-size: 1.7rem;
+    }
 }
+
+/* ================ MEDIA QUERIES (MOBILE)  =============== */
