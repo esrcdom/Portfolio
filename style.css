@@ -121,9 +121,25 @@ nav {
     place-items: center;
     position: fixed;
     z-index: 2;    
-    background: var(--color-white);
+   /* background: var(--color-white); */
 }
 
+
+/* ------------------cambia style NavBar cuando hago Scroll - javascript -----------------*/
+.window-scroll {
+    background: var(--color-black);
+    box-shadow: 0 1.5 rem 1.5 rem rgba(36, 0, 64, 0.2);
+}
+
+.window-scroll a {
+    color: var(--color-white);
+}
+
+.window-scroll .nav__logo h3 {
+    color: var(--color-white);
+}
+
+/* ------------------------- */
 nav a {
     color: var(--color-black);
     font-size: 0.9rem;
@@ -225,23 +241,6 @@ header {
     z-index: 1;
 }
 
-/* ------------------Whatssap Contact-----------------*/
-
-.whatssap {
-    display: none;
-}
-
-@media only screen and (max-width: 768px) {
-    .whatssap {
-        display: block;
-        position: fixed;    
-        width: 100px;
-        height: 100px;
-        z-index: 1;
-        
-        
-    }
-}
 
 
 /* ---------------Servicios --------------- */
@@ -714,7 +713,36 @@ footer {
 
     /* --------------------   SERVICIOS  --------------*/
 
-    .servicios__card {
-        
+    .servicios__cards {
+        grid-template-columns: 1fr;
+    }
+
+     
+    /* --------------------   PORTFOLIO  --------------*/
+
+    .portfolio__head {
+        flex-direction: column;
+        gap: 1fr;
+    }
+
+    .portfolio__head h3, 
+    .portfolio__head-right {
+        width: var(--container-width-sm);
+    }
+
+    .portfolio__projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* --------------------  CONTACTO  --------------*/
+
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .contact__social {
+        justify-content: center;
     }
 }

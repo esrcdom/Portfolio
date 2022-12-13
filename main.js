@@ -19,3 +19,18 @@ const closeNav = () => {
 }
 
 closeBtn.addEventListener('click', closeNav);
+
+
+// Cerrar nav menu cuando un item es clickeado!
+
+if (window.innerWidth < 1024) {
+    document.querySelectorAll(".nav__menu li a").forEach(navItem => {
+        navItem.addEventListener('click', closeNav)
+    })
+}
+
+// Cambio style de mi navBar cuando hago Scroll
+
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
+})
